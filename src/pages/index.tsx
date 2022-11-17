@@ -1,7 +1,9 @@
+import { Container } from "../components";
+
 export default function Home() {
   return (
-    <main>
+    <Container>
       <h1 className="text-3xl font-bold underline">webdev</h1>
-    </main>
+    </Container>
   );
 }
