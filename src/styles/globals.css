@@ -2,22 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-.active-link {
+.link {
   position: relative;
-  font-weight: bold;
 }
 
-.active-link::after {
+.link::before {
+  font-weight: bold;
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: 0px;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 2px;
-  background: rgb(182, 106, 255);
   background: linear-gradient(
     90deg,
     rgba(182, 106, 255, 1) 0%,
     rgba(70, 90, 241, 1) 100%
   );
+
+  transition: 0.3s all;
+}
+.active-link {
+  font-weight: bold;
+}
+
+.active-link::before,
+.link:hover::before {
+  width: 100%;
 }

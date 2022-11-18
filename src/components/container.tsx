@@ -16,8 +16,8 @@ function InternalLink({ href, text }: LinkProps) {
   const isActive = routerPath === href;
 
   return (
-    <li>
-      <NextLink href={href} className={cn(isActive ? "active-link" : "")}>
+    <li className={cn("link", isActive ? "active-link" : "")}>
+      <NextLink href={href}>
         <span className="capsize">{text}</span>
       </NextLink>
     </li>
@@ -26,7 +26,7 @@ function InternalLink({ href, text }: LinkProps) {
 
 function ExternalLink({ href, text }: LinkProps) {
   return (
-    <li>
+    <li className="link">
       <a target="_blank" rel="noopener noreferrer" href={href}>
         {text}
       </a>
@@ -49,7 +49,7 @@ export function Container(props: any) {
   };
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900">
+    <>
       <Head>
         <title>{meta.title}</title>
         <link rel="shortcut icon" href="/images/logo.svg" />
@@ -72,7 +72,7 @@ export function Container(props: any) {
         <meta name="twitter:image" content={meta.image} />
       </Head>
 
-      <div className="min-h-screen min-w-full bg-dark-purple">
+      <div className="min-h-screen min-w-full bg-dark-purple text-white">
         <nav className="pt-20 pb-36 flex">
           <ul className="flex items-end gap-12 text-base mx-auto">
             <li>
@@ -85,8 +85,8 @@ export function Container(props: any) {
                 />
               </NextLink>
             </li>
-            <InternalLink href="/sobre" text="Sobre" />
-            <InternalLink href="/blog" text="Blog" />
+            <InternalLink href="/sobre" text="sobre" />
+            <InternalLink href="/blog" text="blog" />
             <li>|</li>
             <ExternalLink href="https://github.com/caiqalmeida" text="github" />
             <ExternalLink
@@ -97,6 +97,6 @@ export function Container(props: any) {
         </nav>
       </div>
       <main>{children}</main>
-    </div>
+    </>
   );
 }
