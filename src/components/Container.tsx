@@ -34,7 +34,7 @@ export function Container(props: any) {
   const meta = {
     title: "Caique Almeida – web developer.",
     description: `Front-end developer and Javascript enthusiast.`,
-    // Add an static image
+    // TODO: Add an static image
     // image: "",
     type: "website",
     ...customMeta,

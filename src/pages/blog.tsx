@@ -1,12 +1,29 @@
-import { Container } from "../components";
+import { Container, BlogCard } from "../components";
 
 export default function Blog() {
   return (
-    <Container
-      title="Blog – Caique Almeida"
-      description="Pensamentos sobre o que eu aprendo sobre software, programação e a indústria tech.."
-    >
-      <h1>Blog</h1>
+    <Container>
+      <BlogCard
+        date="Dec 8, 2022"
+        title="Cubilia nisl faucibus suspendisse egestas id dignissim"
+        description="Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s"
+      />
+      <BlogCard
+        date="Dec 8, 2022"
+        title="Cubilia nisl faucibus suspendisse egestas id dignissim"
+        description="Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s"
+      />
+      <BlogCard
+        date="Dec 8, 2022"
+        title="Cubilia nisl faucibus suspendisse egestas id dignissim"
+        description="Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s"
+      />
     </Container>
   );
 }
