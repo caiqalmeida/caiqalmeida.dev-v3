@@ -3,7 +3,23 @@ import { Container } from "../components";
 export default function Home() {
   return (
     <Container>
-      <h1 className="text-3xl font-bold underline">webdev</h1>
+      <h1 className="font-bold text-5xl tracking-tight mb-8">
+        Hi , my name is <span className="text-gradient">Caíque</span>
+      </h1>
+
+      <h2 className="mb-1">
+        Web developer at{" "}
+        <a
+          className="link font-bold"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.samisaude.com.br/"
+        >
+          SamiSaúde
+        </a>
+      </h2>
+
+      <h3>I'm always learning and sharing about it .</h3>
     </Container>
   );
 }

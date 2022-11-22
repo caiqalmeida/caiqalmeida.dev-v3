@@ -2,20 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+#__next {
+  @apply bg-gray-50 dark:bg-gray-900;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .link {
   position: relative;
+}
+
+.link:hover {
+  opacity: 1;
 }
 
 .link::before {
   font-weight: bold;
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: -3px;
   left: 0;
   width: 0;
   height: 2px;
   background: linear-gradient(
-    90deg,
+    to right,
     rgba(182, 106, 255, 1) 0%,
     rgba(70, 90, 241, 1) 100%
   );
@@ -24,9 +41,21 @@
 }
 .active-link {
   font-weight: bold;
+  opacity: 1;
 }
 
 .active-link::before,
 .link:hover::before {
   width: 100%;
+}
+
+.text-gradient {
+  color: transparent;
+  background: linear-gradient(to right, #b66aff, #465af1);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.background-gradient {
+  background: linear-gradient(to right, #b66aff, #465af1);
 }
