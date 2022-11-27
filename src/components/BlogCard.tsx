@@ -17,7 +17,7 @@ export function BlogCard({
         <time dateTime={date}>{date}</time>
         <span>{readingTime}</span>
       </p>
-      <h2 className="text-xl font-bold mb-4">{title}</h2>
+      <h2 className="text-xl text-white font-bold mb-4">{title}</h2>
       <p>{description}</p>
     </article>
   );

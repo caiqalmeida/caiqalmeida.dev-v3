@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-      <main className="min-h-screen min-w-full bg-dark-purple text-white">
+      <main className="min-h-screen min-w-full bg-dark-purple">
         <Component {...pageProps} />
       </main>
     </>

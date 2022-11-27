@@ -15,7 +15,7 @@ function InternalLink({ href, text }: LinkProps) {
   return (
     <li
       className={cn(
-        "link text-white opacity-70 tracking-wide text-xs",
+        "link tracking-wide text-xs",
         isActive ? "active-link" : ""
       )}
     >
@@ -85,7 +85,7 @@ export function Container(props: any) {
             <InternalLink href="/blog" text="Blog" />
           </ul>
         </nav>
-        <main>{children}</main>
+        <div>{children}</div>
       </div>
     </>
   );
