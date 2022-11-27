@@ -5,7 +5,6 @@ import { getAllArticles } from "../../lib/mdx";
 
 // TODO: Type post
 export default function Blog({ posts }: any) {
-  console.log("posts", posts);
   return (
     <Container>
       {posts.map((post: any) => (
