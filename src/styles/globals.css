@@ -59,3 +59,47 @@ html {
 .background-gradient {
   background: linear-gradient(to right, #b66aff, #465af1);
 }
+
+.post * {
+  @apply mt-5;
+}
+
+.post ul li {
+  margin: 0;
+}
+
+.post li::before {
+  @apply text-medium-purple;
+  content: "•";
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 7.5px;
+}
+
+.post h2 {
+  @apply text-2xl;
+}
+
+.post h3 {
+  @apply text-xl;
+}
+
+.post a {
+  @apply text-gradient underline;
+}
+
+.post pre {
+  @apply bg-medium-purple p-6 rounded-b;
+}
+
+.post code {
+  @apply text-white bg-medium-purple p-2;
+}
+
+.post pre code {
+  @apply p-0;
+}
+
+.post blockquote {
+  @apply pl-4 border-solid border-l-8 border-medium-purple;
+}

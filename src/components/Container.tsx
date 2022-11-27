@@ -34,8 +34,7 @@ export function Container(props: any) {
   const meta = {
     title: "Caique Almeida – web developer.",
     description: `Front-end developer and Javascript enthusiast.`,
-    // TODO: Add an static image
-    // image: "",
+    image: "'https://caiquealmeida.dev/images/logo-light-gradient.svg'",
     type: "website",
     ...customMeta,
   };
@@ -49,12 +48,17 @@ export function Container(props: any) {
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://caiqalmeida.dev${routerPath}`}
+          content={`https://caiquealmeida.dev${routerPath}`}
         />
-        <link rel="canonical" href={`https://caiqalmeida.dev${routerPath}`} />
+        <link rel="canonical" href={`https://caiquealmeida.dev${routerPath}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Caique Almeida" />
         <meta property="og:description" content={meta.description} />
+        <meta
+          property="og:url"
+          content={`https://caiquealmeida.dev${routerPath}`}
+        />
+        <link rel="canonical" href={`https://caiquealmeida.dev${routerPath}`} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
