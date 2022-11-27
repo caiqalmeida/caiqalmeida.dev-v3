@@ -8,7 +8,7 @@ export default function Blog({ posts }: any) {
   console.log("posts", posts);
   return (
     <Container>
-      {posts.map((post) => (
+      {posts.map((post: any) => (
         <Link href={`/blog/${post.slug}`}>
           <BlogCard
             date={post.date}
