@@ -16,10 +16,12 @@ html {
 }
 
 .link {
+  cursor: pointer;
   position: relative;
 }
 
 .link:hover {
+  @apply text-white;
   opacity: 1;
 }
 
@@ -40,6 +42,7 @@ html {
   transition: 0.3s all;
 }
 .active-link {
+  @apply text-white;
   font-weight: bold;
   opacity: 1;
 }

@@ -1,0 +1,11 @@
+.timeline__item__content::after {
+  content: "";
+  background-color: #1a0c4c;
+  position: absolute;
+  top: calc(50% - 7.5px);
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+  right: auto;
+  left: -7.5px;
+}
