@@ -3,7 +3,7 @@ import cn from "classnames";
 
 export default function BlogCard({ data }: any) {
   return (
-    <div className="flex my-3 w-full justify-start self-end pr-0 pl-7">
+    <div className="flex my-3 w-full justify-start self-end pr-0 pl-7 first:mt-0 last:mb-0">
       <div
         className={cn(
           styles.timeline__item__content,
@@ -12,20 +12,29 @@ export default function BlogCard({ data }: any) {
       >
         <span className="background-gradient rounded-[50%] absolute top-[calc(50%-10px)] w-5 h-5 z-10 right-auto -left-10 after:content-none" />
 
-        <header className=" w-full flex justify-between items-center mb-2">
-          <p className="text-lg text-white font-bold">{data.jobTitle}</p>
-          <time className="text-xs">{data.date}</time>
+        <header className=" w-full flex justify-between items-center mb-1">
+          <a
+            target="_blank"
+            href={data.companySite}
+            className="text-lg text-white font-bold"
+          >
+            {data.company}
+          </a>
+          <span className="px-[2px] py-[2px] background-gradient rounded-[50px]">
+            <time className="px-2 py-1 text-xs uppercase bg-medium-purple rounded-[50px]">
+              {data.date}
+            </time>
+          </span>
         </header>
 
-        <a
-          target="_blank"
-          href={data.companySite}
-          className="text-sm text-white font-light underline mb-5"
+        <p
+          className="text-gradient text-xs tracking-wide uppercase mb-4
+        "
         >
-          {data.company}
-        </a>
+          {data.jobTitle}
+        </p>
 
-        <p className="text-gradient text-sm">{data.stack}</p>
+        <p className="text-sm">{data.stack}</p>
       </div>
     </div>
   );
